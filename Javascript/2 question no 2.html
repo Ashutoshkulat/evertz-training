@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Given a nested array of objects which has property ‘id’, write a function
+      to get id of each object.
+    </title>
+  </head>
+  <body>
+    <h2>
+      Given a nested array of objects which has property ‘id’, write a function
+      to get id of each object.
+    </h2>
+    <script type="text/javascript">
+      let arrobj = [
+        { name: "Ashutosh", id: 100101 },
+        { name: "Ashu", id: 100102 },
+        { name: "Sumit", id: 100103 },
+        { name: "Ram", id: 100104 },
+      ];
+      function getId(array) {
+        var output = [];
+        // //logic 1
+        // for(let i=0; i<array.length; i++){
+        //     output.push(array[i].id);
+        // }
+
+        // logic 2
+        for (let i = 0; i < array.length; i++) {
+          output[i] = array[i].id;
+        }
+
+        document.write("ids in array object are  " + output);
+      }
+      getId(arrobj);
+    </script>
+  </body>
+</html>

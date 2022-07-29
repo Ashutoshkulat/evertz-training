@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get length of objects in an array of objects</title>
+  </head>
+  <body>
+    <h2>Get length of objects in an array of objects</h2>
+    <script type="text/javascript">
+      let arrobj = [
+        { name: "Ashutosh", id: 100101 },
+        { name: "Ashu", id: 100102, city:'Pune' },
+        { name: "Sumit", id: 100103, dep:'UI', mobile:'0123456789' },
+        { name: "Ram"},
+      ];
+      function objectLength(arr){
+        arr1 = []
+        for(let i=0; i<arr.length; i++){
+            arr1[i]=Object.keys(arr[i]).length
+        }
+        document.write('length of objects in given array of object is '+arr1);
+      }
+      objectLength(arrobj)
+    </script>
+  </body>
+</html>

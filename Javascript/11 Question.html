@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11th Question</title>
+  </head>
+  <body>
+    <h2>11th Question</h2>
+    <script type="text/javascript">
+      var input = parseInt(prompt('enter value in byte'));
+      function Showdata(input){
+        if(input<999){
+          document.write('you enter = '+input+' byte');
+        }else if(input<9999){
+          input = input / 1024 ;
+          document.write('you enter = '+input+' kb');
+        }else {
+          input = input / (1024*1024) ;
+          document.write('you enter = '+input+' mb');
+        }
+      }
+      Showdata(input);
+    </script>
+  </body>
+</html>

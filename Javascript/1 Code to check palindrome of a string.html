@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code to check palindrome of a string</title>
+  </head>
+  <body>
+    <h2>Check string is palindrome or not</h2>
+    <script type="text/javascript">
+      var inp = prompt("Enter a word to check it is plaindrom or not");
+      function palindrome(value) {
+        // // logic 1
+
+        // var out = value.split("").reverse().join("");
+        // if (value == out) {
+        //   document.write(value + " is palindrome string");
+        // } else {
+        //   document.write(value + " is not palindrome string");
+        // }
+
+        // // logic 2
+
+        // var splitinp = value.split("");
+        // var final = [];
+        // for (let i = splitinp.length; i >= 0; i--) {
+        //   final.push(splitinp[i]);
+        // }
+        // var out = final.join("");
+        // if (value == out) {
+        //   document.write(value + " is palindrome string");
+        // } else {
+        //   document.write(value + " is not palindrome string");
+        // }
+
+        // logic 3
+
+        var splitinp = value.split("");
+        var final = [];
+        k = 0;
+        for (let i = splitinp.length; i >= 0; i--) {
+          final[k] = splitinp[i];
+          k++;
+        }
+        var out = final.join("");
+        if (value == out) {
+          document.write(value + " is palindrome string");
+        } else {
+          document.write(value + " is not palindrome string");
+        }
+      }
+
+      palindrome(inp);
+    </script>
+  </body>
+</html>

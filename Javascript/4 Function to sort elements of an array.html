@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function to sort elements of an array</title>
+  </head>
+  <body>
+    <h2>Function to sort elements of an array</h2>
+    <script type="text/javascript">
+      var arr = [90, 100, 10, 20, 40];
+      function sort(arr) {
+        var a;
+        var b = prompt(
+          "given arr=[90,100,10,20,40] \n for ascending 'select 1' \n for descending 'select 2' "
+        );
+        //   logic 1
+        if (b == 1) {
+          for (let i = 0; i <= arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+              if (arr[i] > arr[j]) {
+                a = arr[i];
+                arr[i] = arr[j];
+                arr[j] = a;
+              }
+            }
+          }
+          document.write("ascending order of an array is : " + arr + "<br>");
+        }
+        if (b == 2) {
+          for (let i = 0; i <= arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+              if (arr[i] < arr[j]) {
+                a = arr[i];
+                arr[i] = arr[j];
+                arr[j] = a;
+              }
+            }
+          }
+          document.write("descending order of an array is : " + arr + "<br>");
+        }
+
+        // // logic 2
+        // if (b == 1) {
+        //   arr.sort(function (a, b) {
+        //     return a - b;
+        //   });
+        //   document.write("ascending order of an array is : " + arr + "<br>");
+        // }
+        // if (b == 2) {
+        //   arr.sort(function (a, b) {
+        //     return b - a;
+        //   });
+        //   document.write("descending order of an array is : " + arr + "<br>");
+        // }
+
+        // // logic 3
+        // if (b == 1) {
+        //   arr.sort(function (a, b) {
+        //     return a - b;
+        //   });
+        //   document.write("ascending order of an array is : " + arr + "<br>");
+        // }
+        // if (b == 2) {
+        //   arr.sort(function (a, b) {
+        //     return a - b;
+        //   });
+        //   arr.reverse();
+        //   document.write("descending order of an array is : " + arr + "<br>");
+        // }
+
+        // // logic 4
+        // if (b == 1) {
+        //   arr.sort(function (a, b) {
+        //     return b - a;
+        //   });
+        //   arr.reverse();
+        //   document.write("ascending order of an array is : " + arr + "<br>");
+        // }
+        // if (b == 2) {
+        //   arr.sort(function (a, b) {
+        //     return b - a;
+        //   });
+        //   document.write("descending order of an array is : " + arr + "<br>");
+        // }
+      }
+
+      sort(arr);
+    </script>
+  </body>
+</html>

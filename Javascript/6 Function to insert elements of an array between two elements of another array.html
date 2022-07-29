@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function to insert elements of an array between two elements of another array</title>
+  </head>
+  <body>
+    <h2>Function to insert elements of an array between two elements of another array</h2>
+    <script type="text/javascript">
+      var arr1=[1,5]
+      var arr2 = [2,3,4];
+      document.write('two arrays which we are going to merge is ['+arr1+'],['+arr2+']');
+      function mergeArray(arr1,arr2){
+        j =1
+        for(let i= 0; i<arr2.length;i++){
+            arr1.splice(j,0,arr2[i]);
+            j++;
+        }
+        document.write('merged array is ['+arr1+']')
+      }
+      mergeArray(arr1,arr2)
+    </script>
+  </body>
+</html>

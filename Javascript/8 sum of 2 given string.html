@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum of 2 given string</title>
+  </head>
+  <body>
+    <h2>sum of 2 given string</h2>
+    <script type="text/javascript">
+     var str1='10 Rs';
+     var str2='90 Rs';
+     function sumOfStr(str1,str2){
+        str1.split('');
+        str2.split('');
+        num1= str1.replace(/[a-z]/gi,'');
+        num2 = str2.replace(/[a-z]/gi,'');
+        total=parseInt(num1) +parseInt(num2) ;
+        document.write(`Total of ${str1} + ${str2} is ${total} Rs `)
+     }
+     sumOfStr(str1,str2)
+    </script>
+  </body>
+</html>

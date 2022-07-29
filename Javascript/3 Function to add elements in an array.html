@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function to add elements in an array</title>
+  </head>
+  <body>
+    <h2>Function to add elements in an array</h2>
+    <script type="text/javascript">
+      var arr = [11, 12, 13, 14];
+      var a = prompt(
+        "given list is [11,12,13,14] \n to add at start type 1 \n to add at end type 2 \n "
+      );
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "<br>");
+      }
+      document.write("<hr>");
+
+      if (a == 1) {
+        // 1)a  to add element to begining of an array
+        var ui = prompt("what you want add at start of an array");
+        document.write(
+          arr.unshift(ui) + " element added to an array at start "
+        );
+        document.write("<br>");
+      }
+      if (a == 2) {
+        // 2) b add elements to an array at end
+        var ui = prompt("what you want add at end of an array");
+        document.write(arr.push(ui) + " elements added to an array at end");
+        document.write("<br>");
+      }
+      for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

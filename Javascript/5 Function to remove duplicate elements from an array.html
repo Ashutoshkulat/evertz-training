@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function to remove duplicate elements from an array</title>
+  </head>
+  <body>
+    <h2>Function to remove duplicate elements from an array</h2>
+    <script type="text/javascript">
+      var arr = [1,2,2,3,3,3,4,4,4,5,5,6,6,7,7,7];
+      document.write("given Array is [" + arr + " ] <br>");
+
+      function removeDuplicate(arr) {
+        // logic 1
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+              for (var k = j; k < arr.length; k++) {
+                arr[k] = arr[k + 1];
+              }
+
+              j--;
+              arr.length--;
+            }
+          }
+        }
+
+        
+      }
+
+      removeDuplicate(arr)
+      document.write("Array:[");
+      for (i = 0; i < arr.length; i++) {
+        document.write(arr[i]);
+      }
+      document.write("]");
+    </script>
+  </body>
+</html>
