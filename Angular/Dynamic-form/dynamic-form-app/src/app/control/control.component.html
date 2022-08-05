@@ -1,0 +1,40 @@
+<div>
+  <div [ngSwitch]="control.controlType">
+    <app-label *ngSwitchCase="'label'" [meta]="control"></app-label>
+    <app-text-input
+      *ngSwitchCase="'textinput'"
+      [meta]="control"
+      [form]="form"
+    ></app-text-input>
+    <app-dropdown
+      *ngSwitchCase="'dropdown'"
+      [meta]="control"
+      [form]="form"
+    ></app-dropdown>
+    <app-checkbox
+      *ngSwitchCase="'checkbox'"
+      [meta]="control"
+      [form]="form"
+    ></app-checkbox>
+    <app-address 
+      *ngSwitchCase="'address'"
+      [meta]="control"
+      [form]="form"
+    ></app-address>
+    <app-textarea
+      *ngSwitchCase="'textarea'"
+      [meta]="control"
+      [form]="form"
+    ></app-textarea>
+    <app-radio-input
+      *ngSwitchCase="'radio'"
+      [meta]="control"
+      [form]="form"
+      ></app-radio-input>
+      <!-- <app-address-input
+        *ngSwitchCase="'addressObj'"
+        [meta]="control"
+        [form]="form"
+      ></app-address-input> -->
+  </div>
+</div>

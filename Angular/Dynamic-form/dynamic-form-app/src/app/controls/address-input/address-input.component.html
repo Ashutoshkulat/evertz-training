@@ -1,0 +1,6 @@
+<div [formGroup]="form">
+    <label *ngFor="let option of meta.options">
+       <input [formControlName]="option.key" [id]="option.key" type={{option.type}}/>
+        
+        </label>
+</div>
