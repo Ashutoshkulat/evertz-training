@@ -1,5 +1,14 @@
 .maindivhome{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
+}
+.maindivhome h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
