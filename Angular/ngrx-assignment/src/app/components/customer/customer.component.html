@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngFor="let item of order$ | async">
+        <mat-card class="card">
+            <h4>Customer Name : {{item.name}}</h4>
+            <h4>Phone number : {{item.phone}}</h4>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let item of order$ | async;">
+        <mat-card class="example-card">
+            <h4>Customer Name : {{item.name}}</h4>
+            <h4>Phone number : {{item.phone}}</h4>
+            <hr>
+            <div *ngFor="let product of item.data">
+                <h4 style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{ product.title }}</h4>
+                <p><strong>Price:</strong>{{ product.price | currency: "INR" }}</p>
+            </div>
+        </mat-card>
+    </div>
+</div>
+

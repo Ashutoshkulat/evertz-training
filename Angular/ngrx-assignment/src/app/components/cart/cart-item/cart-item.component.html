@@ -1,0 +1,32 @@
+<!-- <ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h4 class="card-title" id="mycart">My Cart</h4>
+    </div>
+    <div class="center">
+      <img
+        src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+        alt=""
+      />
+      <h4 id="linetwo">Your cart is empty</h4>
+      <h6>Add item to it now</h6>
+      <button routerLink="/products" mat-flat-button color="primary">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</ng-container> -->
+
+
+<ng-container *ngIf="products.length !=0">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{ products.image }}" alt="{{ products.title }}" />
+        <div>
+            <h4 style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30ch;">{{ products.title }}</h4>
+        <p><strong>Price:</strong>{{ products.price | currency: "INR" }}</p>
+        &nbsp;
+        <button mat-flat-button color="primary" (click)="onDeletebtn()">Delete</button>
+        </div>
+    </mat-card>
+</ng-container>
+

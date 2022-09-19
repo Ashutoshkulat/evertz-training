@@ -1,0 +1,19 @@
+<!-- <h1 mat-dialog-title>Customer Details</h1>
+<div mat-dialog-content> -->
+    <form >
+            <div class="mb-3">
+                <label for="title">Name</label>
+                <input type="text" id="title" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="description">phone</label>
+                <input type="number" id="description" class="form-control" formControlName="phone">
+            </div>
+            <div class="my-3">
+                <button type="submit" class="btn btn-primary" [disabled]="!addform.valid" (click)="addMember()">Add Post</button>
+            </div>
+        </form>
+<!-- </div> -->
+<!-- <div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="addMember()">Add</button>
+</div> -->

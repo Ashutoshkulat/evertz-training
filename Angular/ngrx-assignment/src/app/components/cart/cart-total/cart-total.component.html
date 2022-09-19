@@ -1,0 +1,27 @@
+<!-- <ng-container>
+    <button mat-button color="primary" (click)="openDialog()" >Payment</button>
+</ng-container> -->
+
+<!-- <h4>your bill total amount is {{grandTotal}} </h4> -->
+<form [formGroup]="addform">
+ 
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text"  formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput type="number"  formControlName="phone" />
+  </mat-form-field>
+  <div class="my-3">
+    <button mat-flat-button
+      type="submit"
+      color="primary"
+      class="btn btn-primary"
+      [disabled]="!addform.valid"
+      (click)="addMember()"
+    >
+      Add Member
+    </button>
+  </div>
+</form>

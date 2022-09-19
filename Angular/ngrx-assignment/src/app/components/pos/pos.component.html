@@ -1,0 +1,13 @@
+
+<div class="container">
+    <div>
+        <div class="firstrow">
+            <app-search></app-search>
+            <app-breadcrumbs></app-breadcrumbs>
+        </div>
+        <app-product-list *ngFor="let item of filterCategory | async" [product]="item"  ></app-product-list>
+    </div>
+    <div>
+        <app-cart></app-cart>
+    </div>
+</div>
